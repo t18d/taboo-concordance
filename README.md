@@ -24,6 +24,7 @@ last_modified_at: 2025-07-06T12:59:54+00:00
         the given name, e.g. 毛公.</li>
       <li>Styles are not included unless they replaced the given name and a new
         style was adopted, e.g. 滕元發.</li>
+      <li>The assignment of PUA code points is that of <a href="https://fgwang.blogspot.com">WFG's FSung</a>, the de-facto standard for ideographs that Unicode declines to encode separately from their unified counterpart.</li>
     </ul>
   </details>
 </p>
