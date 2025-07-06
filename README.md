@@ -5,7 +5,7 @@ permalink: /
 seo:
   type: Dataset
   name: A Concordance of Taboo
-last_modified_at: 2025-07-06T12:13:17+00:00
+last_modified_at: 2025-07-06T12:59:54+00:00
 ---
 # A Concordance of Taboo
 <p align="right">
@@ -1598,7 +1598,7 @@ Substitute|Wang (1997)|Wang (2009)|Hsiang (2016)|Huang (2024)|Addenda
 睦親|M||||
 睦州|M|41|||
 暮|M||||
-穆仁裕|M||||Copies of 野客叢書 transmits the corrupted form 仁格
+穆仁裕|M||||Copies of 野客叢書 transmit the corrupted form 仁格
 穆四|M|63|||
 納幣|N||||
 納成|N||||
@@ -1772,7 +1772,7 @@ Substitute|Wang (1997)|Wang (2009)|Hsiang (2016)|Huang (2024)|Addenda
 虔|Q||||
 遣兵|Q||||
 羌|Q||||
-瑲|Q|26|||Not a homophone of 昌, pace Wu (1993)
+瑲|Q|26|||Not a homophone of 昌, _pace_ Wu (1993)
 強敵|Q||||
 墻/牆|Q|35|||
 墻隍|Q||||
