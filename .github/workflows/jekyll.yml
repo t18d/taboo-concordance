@@ -114,7 +114,7 @@ jobs:
           path: _site/assets/FSung.woff2
           key: cache-${{ hashFiles('concordance.csv') }}
       - name: Generate FSung.woff2
-        if: steps.cache-su.outputs.cache-hit != 'true'
+        if: steps.cache-FSung.outputs.cache-hit != 'true'
         run: |
           sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
           npx glyphhanger ./_site/index.html --formats=woff2 --subset=assets/font/*.ttf
@@ -175,7 +175,7 @@ jobs:
           path: _site/assets/FSung.woff2
           key: cache-${{ hashFiles('concordance.csv') }}
       - name: Generate FSung.woff2
-        if: steps.cache-su.outputs.cache-hit != 'true'
+        if: steps.cache-FSung.outputs.cache-hit != 'true'
         run: |
           sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
           npx glyphhanger ./_site/index.html --formats=woff2 --subset=assets/font/*.ttf
