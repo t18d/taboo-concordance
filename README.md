@@ -22,9 +22,16 @@ last_modified_at: 2025-07-16T09:28:20+00:00
     <ul>
       <li>Honorifics are not included unless they were regularly used in place of
         the given name, e.g. 毛公.</li>
-      <li>Styles are not included unless they replaced the given name and a new
-        style was adopted, e.g. 滕元發.</li>
-      <li>The assignment of PUA code points is that of <a href="https://fgwang.blogspot.com">WFG's FSung</a>, the de-facto standard for ideographs that Unicode declines to encode separately from their unified counterpart.</li>
+      <li>Styles are not included unless they actually became the given name and
+        a new style was adopted, e.g. 滕元發.</li>
+      <li>For backward compatibility, lemmatisation follows Wang
+        (1997). This means a given name usually combines with the surname to
+        form a single lemma, whilst the style tends to be its own lemma. If in
+        doubt, search in the browser.</li>
+      <li>The assignment of PUA code points is that of
+        <a href="https://fgwang.blogspot.com">WFG's FSung</a>, the de-facto
+        standard for ideographs that Unicode declines to encode separately from
+        their unified counterpart.</li>
     </ul>
   </details>
 </p>
