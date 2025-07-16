@@ -42,7 +42,7 @@ last_modified_at: 2025-07-16T10:05:32+00:00
     <br>
     <ul>
       <li>Hsiang, Hsi, <em>Han yü pi hui yen chiu</em> (Peking, 2016).</li>
-      <li>Huang, I-nung, <em>Ch'ing tai pi hui yen chiu</em> (???, 2024).</li>
+      <li>Huang, I-nung, <em>Ch'ing tai pi hui yen chiu</em> (Hsinchu, 2024).</li>
       <li>Wang, Chien, <em>Shih hui tz'u tien</em> (Tokyo, 1997).</li>
       <li>Wang, Yen-k'un, <em>Li tai pi hui tzu hui tien</em> (Peking, 2009).</li>
     </ul>
