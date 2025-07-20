@@ -20,14 +20,14 @@ last_modified_at: 2025-07-20T09:02:35+00:00
     <summary>Conventions</summary>
     <br>
     <ul>
-      <li><strong>Honorifics</strong> are not included unless they were regularly
-        used in place of the given name, e.g. 毛公.</li>
+      <li><strong>Honorifics</strong> are not included unless they were
+        regularly used in place of the given name, e.g. 毛公.</li>
       <li><strong>Styles</strong> are not included unless they actually became
         the given name and a new style was adopted, e.g. 滕元發.</li>
-      <li>For backward compatibility, <strong>lemmatisation</strong> follows Wang
-        (1997). This means a <strong>given name</strong> usually combines with
-        the surname to form a single lemma, whilst a <strong>style</strong> or
-        <strong>posthumous title</strong> tends to be its own lemma. When in
+      <li>For backward compatibility, <strong>lemmatisation</strong> follows
+        Wang (1997). This means a <strong>given name</strong> usually combines
+        with the surname to form a single lemma, whilst a <strong>style</strong>
+        or <strong>posthumous title</strong> tends to be its own lemma. When in
         doubt, search in the browser.</li>
       <li>The assignment of PUA code points is that of
         <a href="https://fgwang.blogspot.com">WFG's FSung</a>, the de-facto
@@ -43,9 +43,11 @@ last_modified_at: 2025-07-20T09:02:35+00:00
     <br>
     <ul>
       <li>Hsiang, Hsi, <em>Han yü pi hui yen chiu</em> (Peking, 2016).</li>
-      <li>Huang, I-nung, <em>Ch'ing tai pi hui yen chiu</em> (Hsinchu, 2024).</li>
+      <li>Huang, I-nung, <em>Ch'ing tai pi hui yen chiu</em> (Hsinchu,
+        2024).</li>
       <li>Wang, Chien, <em>Shih hui tz'u tien</em> (Tokyo, 1997).</li>
-      <li>Wang, Yen-k'un, <em>Li tai pi hui tzu hui tien</em> (Peking, 2009).</li>
+      <li>Wang, Yen-k'un, <em>Li tai pi hui tzu hui tien</em> (Peking,
+        2009).</li>
     </ul>
   </details>
 </p>
