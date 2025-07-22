@@ -20,10 +20,12 @@ last_modified_at: 2025-07-22T13:57:33+00:00
     <summary>Conventions</summary>
     <br>
     <ul>
+      <li>Where a <strong>lemma</strong> is discussed on consecutive pages, only
+        the first page is recorded.</li>
       <li><strong>Honorifics</strong> are not included unless they were
         regularly used in place of the given name, e.g. 毛公.</li>
-      <li><strong>Styles</strong> are not included unless they actually became
-        the given name and a new style was adopted, e.g. 滕元發.</li>
+      <li><strong>Styles</strong> are not included unless they actually <em>
+        became</em> the given name and a new style was adopted, e.g. 滕元發.</li>
       <li>For backward compatibility, <strong>lemmatisation</strong> follows
         Wang (1997). This means a <strong>given name</strong> usually combines
         with the surname to form a single lemma, whilst a <strong>style</strong>
