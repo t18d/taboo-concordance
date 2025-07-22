@@ -5,7 +5,7 @@ permalink: /
 seo:
   type: Dataset
   name: A Concordance of Taboo
-last_modified_at: 2025-07-22T13:57:33+00:00
+last_modified_at: 2025-07-22T14:12:04+00:00
 ---
 # A Concordance of Taboo
 <p align="right">
