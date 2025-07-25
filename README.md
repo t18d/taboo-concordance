@@ -20,7 +20,7 @@ last_modified_at: 2025-07-25T06:46:08+00:00
     <summary>Conventions</summary>
     <br>
     <ul>
-      <li><strong>Alphabetisation</strong> is that of <em>p'in yin</em>, to help
+      <li><strong>Alphabetisation</strong> is that of <em>p’in yin</em>, to help
         users that have not mastered Wade.</li>
       <li>The sort order of <strong>homophones</strong> is based on Wang (1997).
         When an additional lemma is created, the association and complexity of
