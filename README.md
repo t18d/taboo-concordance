@@ -22,8 +22,8 @@ last_modified_at: 2025-07-28T05:49:48+00:00
     <ul>
       <li>The aim is to eventually cover the research on every taboo substitute 
         attested in pre-1912 sources. Name tabooing in the first Republican and 
-        Communist periods are subjects in their own right, but fall outside the 
-        scope of this concordance.</li>
+        Communist periods are rich subjects in their own right, but fall outside 
+        the scope of this concordance.</li>
       <li>The sort order of <strong>homophones</strong> is based on Wang (1997).
         When an additional lemma is created, the association and complexity of
         its radicals determine the position where it gets inserted.</li>
