@@ -15,13 +15,29 @@ last_modified_at: 2025-07-30T12:32:27+00:00
 <br>
 <br>
 <br>
+<p>Of the three dictionaries in this concordance, Wang (2009) is the only one 
+  that engages with earlier scholarship critically. Wang (1997) is less
+  sophisticated, but offers complementary coverage. Hsiang (2016) treads much 
+  the same ground and yet fails to take advantage of the Wangs; it is chiefly 
+  useful for the chapter on death and is otherwise cited only when unique
+  infomation is to be found there.</p>
+
+<p>All three quoted from modern editions; none checked the incunabula or 
+  manuscripts. Never trust what you find in them. Always verify the text for
+  yourself.</p>
+
+<p>Scholars are encouraged to open an 
+  <a href="https://github.com/t18d/taboo-concordance/issues">issue</a> or pull 
+  request to add the results of their published research. Huang (2024) is a 
+  desideratum.</p>
+<br>
 <p>
   <details>
     <summary>Conventions</summary>
     <br>
     <ul>
       <li>The aim is to eventually cover the research on every taboo substitute 
-        attested in pre-1912 sources. Name tabooing in the first Republican and 
+        attested in pre-1912 sources. Tabooing in the first Republican and 
         Communist periods are rich subjects in their own right, but fall outside 
         the scope of this concordance.</li>
       <li>The sort order of <strong>homophones</strong> is based on Wang (1997).
@@ -49,7 +65,12 @@ last_modified_at: 2025-07-30T12:32:27+00:00
 <p>
   <details>
     <summary>Bibliography</summary>
-    <br>
+    <h3>Theory</h3>
+    <ul>
+      <li>Adamek, Piotr, <em>A Good Son Is Sad if He Hears the Name of His 
+        Father</em> (Sankt Augustin, 2015).</li>
+    </ul>
+    <h3>Sources</h3>
     <ul>
       <li>Hsiang, Hsi, 漢語避諱研究 (Peking, 2016).</li>
       <li>Huang, I-nung, <em>Ch'ing tai pi hui yen chiu</em> (Hsinchu,
