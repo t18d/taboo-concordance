@@ -51,7 +51,7 @@ last_modified_at: 2025-07-30T12:20:07+00:00
     <summary>Bibliography</summary>
     <br>
     <ul>
-      <li>Hsiang, Hsi, <em>Han yü pi hui yen chiu</em> (Peking, 2016).</li>
+      <li>Hsiang, Hsi, 漢語避諱研究 (Peking, 2016).</li>
       <li>Huang, I-nung, <em>Ch'ing tai pi hui yen chiu</em> (Hsinchu,
         2024).</li>
       <li>Wang, Chien, 史諱辭典 (Tokyo, 1997).</li>
