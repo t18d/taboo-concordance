@@ -5,7 +5,7 @@ permalink: /
 seo:
   type: Dataset
   name: A Concordance of Taboo
-last_modified_at: 2025-07-31T08:19:02+00:00
+last_modified_at: 2025-07-31T08:24:24+00:00
 ---
 # A Concordance of Taboo [![DOI](https://t18d.github.io/taboo-concordance/assets/1009959870.svg)](https://doi.org/10.5281/zenodo.16625840)
 <p align="right">
@@ -824,7 +824,7 @@ _4821_ |_3288_ |_3108_ |_337&nbsp;of&nbsp;~1260_||
 二十四化||407|||
 法草|F||||
 法鑑|F||||
-法誡|F|232|||The 1st edn of 題跋記 reads 誡, not 戒. See now Wang T'ien-jan, 說苑札記. 
+法誡|F|232|||The 1st edn of 題跋記 reads 誡, not 戒. See now Wang T'ien-jan (2019)
 法經|F||||
 法明|F|298|||
 法式善||374|||
@@ -2340,7 +2340,7 @@ _4821_ |_3288_ |_3108_ |_337&nbsp;of&nbsp;~1260_||
 女直|N|389|||
 區白獸|O|109|||
 番州|P||||
-潘|||||for 澣; see 補寰宇訪碑錄 iv 29
+潘|||||for 澣; see Liu Hsi-hai (1834)
 󴔹寳慶|||||南史; Sung edn reads 寳, not 寶
 󴔹妃|||||ibid.
 󴔹勗|P|402|||Sung edn reads 勗, not 勖
