@@ -5,7 +5,7 @@ permalink: /
 seo:
   type: Dataset
   name: A Concordance of Taboo
-last_modified_at: 2025-07-31T08:24:24+00:00
+last_modified_at: 2025-07-31T11:57:08+00:00
 ---
 # A Concordance of Taboo [![DOI](https://t18d.github.io/taboo-concordance/assets/1009959870.svg)](https://doi.org/10.5281/zenodo.16625840)
 <p align="right">
