@@ -62,24 +62,8 @@ last_modified_at: 2025-07-31T03:37:21+00:00
   </details>
 </p>
 
-<p>
-  <details>
-    <summary>Bibliography</summary>
-    <h3>Theory</h3>
-    <ul>
-      <li>Adamek, Piotr, <em>A Good Son Is Sad if He Hears the Name of His 
-        Father</em> (Sankt Augustin, 2015).</li>
-    </ul>
-    <h3>Sources</h3>
-    <ul>
-      <li>Hsiang, Hsi, 漢語避諱研究 (Peking, 2016).</li>
-      <li>Huang, I-nung, <em>Ch'ing tai pi hui yen chiu</em> (Hsinchu,
-        2024).</li>
-      <li>Wang, Chien, 史諱辭典 (Tokyo, 1997).</li>
-      <li>Wang, Yen-k'un, 歷代避諱字彙典 (Peking, 2009).</li>
-    </ul>
-  </details>
-</p>
+▸ [Bibliography](https://t18d.github.io/taboo-concordance/bibliography/)
+
 <br>
 <br>
 <!-- Anything not in the table must be before this comment. -->
