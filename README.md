@@ -5,7 +5,7 @@ permalink: /
 seo:
   type: Dataset
   name: A Concordance of Taboo
-last_modified_at: 2025-07-31T02:40:50+00:00
+last_modified_at: 2025-07-31T02:52:46+00:00
 ---
 # A Concordance of Taboo
 <p align="right">
@@ -2357,8 +2357,8 @@ _4821_ |_3288_ |_3108_ |_337&nbsp;of&nbsp;~1260_||
 區白獸|O|109|||
 番州|P||||
 潘|||||for 澣; see 補寰宇訪碑錄 iv 29
-󴔹寳慶|||||Sung edn of 南史 reads 寳, not 寶
-󴔹妃|||||
+󴔹寳慶|||||南史; Sung edn reads 寳, not 寶
+󴔹妃|||||ibid.
 󴔹勗|P|402|||Sung edn reads 勗, not 勖
 潘岳||432|||
 判|P|410|||
