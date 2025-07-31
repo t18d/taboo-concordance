@@ -48,7 +48,7 @@ last_modified_at: 2025-07-31T02:52:46+00:00
         with the surname to form a single lemma, whilst a <strong>style</strong>
         or <strong>posthumous title</strong> tends to be its own lemma. When in
         doubt, search in the browser.</li>
-      <li>Where a <strong>lemma</strong> is discussed on consecutive pages, only
+      <li>Where a lemma is discussed on <strong>consecutive pages</strong>, only
         the first page is recorded.</li>
       <li><strong>Honorifics</strong> are not included unless they were
         regularly used in place of the given name, e.g. 毛公.</li>
