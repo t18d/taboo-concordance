@@ -5,7 +5,7 @@ permalink: /
 seo:
   type: Dataset
   name: A Concordance of Taboo
-last_modified_at: 2025-07-31T11:57:08+00:00
+last_modified_at: 2025-07-31T12:45:30+00:00
 ---
 # A Concordance of Taboo [![DOI](https://t18d.github.io/taboo-concordance/assets/1009959870.svg)](https://doi.org/10.5281/zenodo.16625840)
 <p align="right">
@@ -1609,6 +1609,7 @@ _4821_ |_3288_ |_3108_ |_337&nbsp;of&nbsp;~1260_||
 鏡|J|150|||
 鏡湖|J|215|||
 敬|J||||
+敬謹|||||see Wang T'ien-jan (2019) n. 42
 敬深|J||||
 敬亭山|J|380|||
 敬豫||420|||
