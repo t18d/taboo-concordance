@@ -5,7 +5,7 @@ permalink: /
 seo:
   type: Dataset
   name: A Concordance of Taboo
-last_modified_at: 2025-07-30T13:18:25+00:00
+last_modified_at: 2025-07-31T02:40:50+00:00
 ---
 # A Concordance of Taboo
 <p align="right">
@@ -86,7 +86,7 @@ last_modified_at: 2025-07-30T13:18:25+00:00
 
 Substitute|Wang&nbsp;(1997)|Wang&nbsp;(2009)|Hsiang&nbsp;(2016)|Huang&nbsp;(2024)|Addenda
 ---|---|---|---|---|---
-_4817_ |_3288_ |_3107_ |_337&nbsp;of&nbsp;~1260_||
+_4821_ |_3288_ |_3108_ |_337&nbsp;of&nbsp;~1260_||
 愛慕|A||||
 愛人|A||||
 愛新覺羅福錕||208|||
@@ -1303,6 +1303,7 @@ _4817_ |_3288_ |_3107_ |_337&nbsp;of&nbsp;~1260_||
 花民|H|119|||
 花人||85|||
 花用吉||59|||
+󱊨||119|||
 華林|H||||
 華林園|H|60|||
 華人||85|||
@@ -2355,7 +2356,10 @@ _4817_ |_3288_ |_3107_ |_337&nbsp;of&nbsp;~1260_||
 女直|N|389|||
 區白獸|O|109|||
 番州|P||||
-潘勗|P|402|||Sung edn reads 勗, not 勖
+潘|||||for 澣; see 補寰宇訪碑錄 iv 29
+󴔹寳慶|||||Sung edn of 南史 reads 寳, not 寶
+󴔹妃|||||
+󴔹勗|P|402|||Sung edn reads 勗, not 勖
 潘岳||432|||
 判|P|410|||
 判大睦親事||432|||
