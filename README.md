@@ -7,7 +7,7 @@ seo:
   name: A Concordance of Taboo
 last_modified_at: 2025-07-31T02:57:33+00:00
 ---
-# A Concordance of Taboo
+# A Concordance of Taboo [![DOI](https://t18d.github.io/taboo-concordance/assets/1009959870.svg)](https://doi.org/10.5281/zenodo.16625840)
 <p align="right">
   <em>a project of <a href="https://t18d.github.io/">Open Source by
     Tonkünstler-on-the-Bund</a></em>
