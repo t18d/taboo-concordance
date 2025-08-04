@@ -79,8 +79,8 @@ last_modified_at: 2025-07-31T12:51:48+00:00
       <li>Wang, Yen-k'un, 歷代避諱字彙典 (Peking, 2009).</li>
     </ul>
     For the references in addenda, see 
-    <a href="https://github.com/t18d/taboo-concordance/wiki">documentation
-    </a>.
+    <a href="https://github.com/t18d/taboo-concordance/wiki">
+      documentation</a>.
   </details>
 </p>
 <br>
