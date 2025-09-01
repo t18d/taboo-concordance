@@ -1,11 +1,11 @@
 ---
 title: A Concordance of Taboo
-description: Index to Wang (1997), Wang (2009), Hsiang (2016) and Huang (2024) with addenda
 permalink: /
 seo:
   type: Dataset
   name: A Concordance of Taboo
 last_modified_at: 2025-09-01T01:07:15+00:00
+description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避諱研究』and『清代避諱研究』with addenda
 ---
 # A Concordance of Taboo [![DOI](https://t18d.github.io/taboo-concordance/assets/1009959870.svg)](https://doi.org/10.5281/zenodo.16625840)
 <p align="right">
