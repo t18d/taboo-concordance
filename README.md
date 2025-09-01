@@ -26,10 +26,11 @@ last_modified_at: 2025-09-01T00:20:50+00:00
   manuscripts. Never trust what you find in them. Always verify the text for
   yourself.</p>
 
+<p>Huang (2024), on Ch'ing practice, is a model of verifiability.</p>
+
 <p>Scholars are encouraged to open an 
   <a href="https://github.com/t18d/taboo-concordance/issues">issue</a> or pull 
-  request to add the results of their published research. Huang (2024) is a 
-  desideratum.</p>
+  request to add the results of their published research.</p>
 <br>
 <p>
   <details>
@@ -58,6 +59,8 @@ last_modified_at: 2025-09-01T00:20:50+00:00
         <a href="https://fgwang.blogspot.com">WFG's FSung</a>, the de-facto
         standard for ideographs that Unicode declines to encode separately from
         their unified counterpart.</li>
+      <li>Ideographs with <strong>omitted stroke(s)</strong> in Huang (2024) are
+        covered insofar as they are available in FSung v1.10.</li>
     </ul>
   </details>
 </p>
@@ -73,8 +76,7 @@ last_modified_at: 2025-09-01T00:20:50+00:00
     <h3>Sources</h3>
     <ul>
       <li>Hsiang, Hsi, 漢語避諱研究 (Peking, 2016).</li>
-      <li>Huang, I-nung, <em>Ch'ing tai pi hui yen chiu</em> (Hsinchu,
-        2024).</li>
+      <li>Huang, Yi-lung, 清代避諱研究 (Hsinchu, 2024).</li>
       <li>Wang, Chien, 史諱辭典 (Tokyo, 1997).</li>
       <li>Wang, Yen-k'un, 歷代避諱字彙典 (Peking, 2009).</li>
     </ul>
