@@ -24,7 +24,7 @@ jobs:
       # added or changed files to the repository.
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           # Do a sparse checkout on given patterns. Each pattern should be separated with
           # new lines.
@@ -35,7 +35,7 @@ jobs:
             README.md
       - uses: actions/setup-python@v5
         with: 
-          python-version: '3.13'
+          python-version: '3.x'
       - run: |
           python csv-to-md.py
           sed -i "0,/last_modified_at.*/s//last_modified_at: $(date -Iseconds)/" README.md
