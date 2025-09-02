@@ -54,6 +54,7 @@ jobs:
             _layouts/
             assets/css/
             assets/font/
+            assets/svg/
             docs/
       - uses: dorny/paths-filter@v3
         id: filter
@@ -141,6 +142,7 @@ jobs:
             _layouts/
             assets/css/
             assets/font/
+            assets/svg/
             docs/
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
