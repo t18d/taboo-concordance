@@ -4,7 +4,7 @@ permalink: /
 seo:
   type: Dataset
   name: A Concordance of Taboo
-last_modified_at: 2025-09-15T06:19:52+00:00
+last_modified_at: 2025-09-15T06:37:09+00:00
 description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避諱研究』and『清代避諱研究』with addenda
 ---
 # A Concordance of Taboo [![DOI](https://t18d.github.io/taboo-concordance/assets/svg/zenodo.16625840.svg)](https://doi.org/10.5281/zenodo.16625840)
