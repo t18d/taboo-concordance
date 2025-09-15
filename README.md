@@ -60,7 +60,7 @@ description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避
         standard for ideographs that Unicode declines to encode separately from
         their unified counterpart.</li>
       <li>Ideographs with <strong>omitted stroke(s)</strong> in Huang (2024) are
-        covered insofar as they are available in FSung v1.10.</li>
+        covered insofar as they are available in FSung v1.70.</li>
     </ul>
   </details>
 </p>
@@ -87,6 +87,9 @@ description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避
 </p>
 <br>
 <br>
+<p align="right">
+  v2025.9.1 (FSung: v1.70)
+</p>
 <!-- Anything not in the table must be before this comment. -->
 
 Substitute|Wang&nbsp;(1997)|Wang&nbsp;(2009)|Hsiang&nbsp;(2016)|Huang&nbsp;(2024)|Addenda
