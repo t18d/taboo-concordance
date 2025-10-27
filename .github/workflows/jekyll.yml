@@ -81,12 +81,25 @@ jobs:
     # Defaults to "Apply automatic changes"
           commit_message: Apply timestamp
           commit_user_name: git-auto-commit-action
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+      - name: Detect latest cached Ruby
+        run: |
+          if [ -d "/opt/hostedtoolcache/Ruby" ]; then
+            LATEST_RUBY=$(ls -d /opt/hostedtoolcache/Ruby/*/x64/bin \
+              | awk -F/ '{print $5}' \
+              | sort -V \
+              | tail -1)
+
+            echo "LATEST_RUBY_VERSION=$LATEST_RUBY" >> $GITHUB_ENV
+            echo "Latest cached Ruby: $LATEST_RUBY"
+          else
+            echo "No cached Ruby found; falling back to 'ruby'."
+            echo "LATEST_RUBY_VERSION=ruby" >> $GITHUB_ENV
+          fi
+      - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 'ruby' # Not needed with a `.ruby-version` or `.tool-versions`
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+          ruby-version: ${{ env.LATEST_RUBY_VERSION }}
+          bundler-cache: true
+          cache-version: 0
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
@@ -118,7 +131,6 @@ jobs:
       - name: Generate FSung.woff2
         if: steps.cache-FSung.outputs.cache-hit != 'true'
         run: |
-          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
           npx glyphhanger ./_site/index.html --formats=woff2 --subset=assets/font/*.ttf
           fonttools merge assets/font/*subset*
           npx glyphhanger --subset=merged.ttf --formats=woff2
