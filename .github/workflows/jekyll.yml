@@ -40,7 +40,7 @@ concurrency:
 jobs:
   # Build job
   build1:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2404
     if: ${{ github.event_name == 'push' }}
     steps:
       - name: Checkout
@@ -128,7 +128,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
 
   build2:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2404
     if: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
     steps:
       - name: Checkout
@@ -195,7 +195,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2404
     needs: build1
     steps:
       - name: Deploy to GitHub Pages
@@ -206,7 +206,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2404
     needs: build2
     steps:
       - name: Deploy to GitHub Pages
