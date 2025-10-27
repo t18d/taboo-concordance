@@ -119,7 +119,9 @@ jobs:
       - name: Generate FSung.woff2
         if: steps.cache-FSung.outputs.cache-hit != 'true'
         run: |
-          bunx glyphhanger ./_site/index.html --formats=woff2 --subset=assets/font/*.ttf
+          source .venv/bin/activate
+          bunx glyphhanger ./_site/index.html --formats=woff2 \
+            --subset=assets/font/*.ttf
           fonttools merge assets/font/*subset*
           bunx glyphhanger --subset=merged.ttf --formats=woff2
           cp merged-subset.woff2 _site/assets/FSung.woff2
