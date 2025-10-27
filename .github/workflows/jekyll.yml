@@ -15,6 +15,7 @@ on:
       - '**.html'
       - .github/workflows/jekyll.yml
       - _config.yml
+      - fontimize.py
 
   workflow_run:
     workflows:
@@ -120,11 +121,19 @@ jobs:
         if: steps.cache-FSung.outputs.cache-hit != 'true'
         run: |
           source .venv/bin/activate
-          bunx glyphhanger ./_site/index.html --formats=woff2 \
-            --subset=assets/font/*.ttf
-          fonttools merge assets/font/*subset*
-          bunx glyphhanger --subset=merged.ttf --formats=woff2
-          cp merged-subset.woff2 _site/assets/FSung.woff2
+          fonts=$(ls assets/font/*.ttf | tr '\n' ' ')
+
+          python3 fontimize.py ./_site/index.html \
+            --fonts $fonts \
+            --outputdir assets/font \
+            --subsetname subset
+
+          fonttools merge assets/font/*subset.ttf
+
+          fonttools subset merged.ttf \
+            --unicodes=* \
+            --flavor=woff2 \
+            --output-file=_site/assets/FSung.woff2
 
       - name: Install minify
         run: |
