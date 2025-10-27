@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - concordance.csv
+      - README.md
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -26,29 +27,50 @@ jobs:
     steps:
       - uses: actions/checkout@v5
         with:
-          # Do a sparse checkout on given patterns. Each pattern should be separated with
-          # new lines.
-          # Default: null
-          sparse-checkout: |
-            concordance.csv
-            csv-to-md.py
-            README.md
-      - uses: actions/setup-python@v5
-        with: 
-          python-version: '3.x'
-      - run: |
-          python csv-to-md.py
-          sed -i "0,/last_modified_at.*/s//last_modified_at: $(date -Iseconds)/" README.md
-      - name: Pull Remote Changes
-        run: git pull
-      - uses: stefanzweifel/git-auto-commit-action@v5
+          fetch-depth: 2   # Enough history to amend last commit
+
+      - name: Detect file changes
+        id: filter
+        uses: dorny/paths-filter@v3
         with:
-    # Optional. Commit message for the created commit.
-    # Defaults to "Apply automatic changes"
-          commit_user_name: git-auto-commit-action
-          # Optional glob pattern of files which should be added to the commit
-          # Defaults to all (.)
-          # See the `pathspec`-documentation for git
-          # - https://git-scm.com/docs/git-add#Documentation/git-add.txt-ltpathspecgt82308203
-          # - https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-aiddefpathspecapathspec
+          list-files: shell
+          filters: |
+            csv:
+              - concordance.csv
+            md:
+              - README.md
+
+
+      # Handle CSV changes in batch OR rebuild all on dispatch
+      - name: Process CSVs
+        if: steps.filter.outputs.csv == 'true' || github.event_name == 'workflow_dispatch'
+        run: |
+          python csv-to-md.py
+
+      # Handle Markdown changes in batch (no dispatch override)
+      - name: Update last_modified_at in changed MDs
+        if: steps.filter.outputs.md == 'true'
+        run: |
+          sed -i "0,/last_modified_at.*/s//last_modified_at: $(date -Iseconds)/" README.md
+
+      # Capture original commit author and message
+      - name: Get author
+        id: author
+        run: |
+          echo "name=$(git log -1 --pretty=format:'%an')" >> $GITHUB_OUTPUT
+          echo "email=$(git log -1 --pretty=format:'%ae')" >> $GITHUB_OUTPUT
+          {
+            echo "msg<<EOF"
+            git log -1 --pretty=%B
+            echo "EOF"
+          } >> $GITHUB_OUTPUT
+
+      # Amend the last commit instead of creating a new one
+      - uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_options: '--amend --no-edit'
+          commit_user_name: ${{ steps.author.outputs.name }}
+          commit_user_email: ${{ steps.author.outputs.email }}
+          commit_message: ${{ steps.author.outputs.msg }}
+          push_options: '--force-with-lease'
           file_pattern: README.md

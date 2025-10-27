@@ -11,7 +11,6 @@ on:
   push:
     branches: ['main']
     paths:
-      - '**.md'
       - '**.css'
       - '**.html'
       - .github/workflows/jekyll.yml
@@ -39,7 +38,13 @@ concurrency:
 
 jobs:
   # Build job
-  build1:
+  build:
+    if: ${{ 
+      (github.event_name == 'workflow_run' 
+        && github.event.workflow_run.conclusion == 'success') 
+      || github.event_name == 'workflow_dispatch' 
+      || github.event_name == 'push' 
+      }}
     runs-on: blacksmith-4vcpu-ubuntu-2404
     if: ${{ github.event_name == 'push' }}
     steps:
@@ -55,32 +60,7 @@ jobs:
             assets/css/
             assets/font/
             assets/svg/
-            docs/
-      - uses: dorny/paths-filter@v3
-        id: filter
-        with:
-    # Enable listing of files matching each filter.
-    # Paths to files will be available in `${FILTER_NAME}_files` output variable.
-    # Paths will be escaped and space-delimited.
-    # Output is usable as command-line argument list in Linux shell
-          list-files: shell
 
-    # In this example changed files will be checked by linter.
-    # It doesn't make sense to lint deleted files.
-    # Therefore we specify we are only interested in added or modified files.
-          filters: |
-            markdown:
-              - added|modified: '**.md'
-      - name: Lint Markdown
-        if: ${{ steps.filter.outputs.markdown == 'true' }}
-        run: |
-          sed -i "0,/last_modified_at.*/s//last_modified_at: $(date -Iseconds)/" ${{ steps.filter.outputs.markdown_files }}
-      - uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-    # Optional. Commit message for the created commit.
-    # Defaults to "Apply automatic changes"
-          commit_message: Apply timestamp
-          commit_user_name: git-auto-commit-action
       - name: Detect latest cached Ruby
         run: |
           if [ -d "/opt/hostedtoolcache/Ruby" ]; then
@@ -108,20 +88,29 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-      - name: HTML/CSS/JS Minifier
-        uses: docker://devatherock/minify-js:3.1.0
+
+      - uses: oven-sh/setup-bun@v2
         with:
-          directory: './_site'
-          add_suffix: false
-      - uses: actions/setup-node@v4
+          bun-version: latest
+
+      - uses: astral-sh/setup-uv@v6
         with:
-          cache: 'npm'
-          cache-dependency-path: 'LICENSE'
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-          cache: 'pip' # caching pip dependencies
-      - run: pip install -r requirements.txt
+          version: "latest"
+          enable-cache: true
+
+      - name: Install dependencies
+        run: |
+          bun install
+          uv venv
+          uv pip install -r requirements.txt
+
+      - name: PurgeCSS
+        run: |
+          bunx purgecss \
+            --content "_site/index.html" \
+            --css "_site/assets/css/default.css" \
+            --output "_site/assets/css"
+
       - name: Cache FSung.woff2
         id: cache-FSung
         uses: actions/cache@v4
@@ -131,95 +120,35 @@ jobs:
       - name: Generate FSung.woff2
         if: steps.cache-FSung.outputs.cache-hit != 'true'
         run: |
-          npx glyphhanger ./_site/index.html --formats=woff2 --subset=assets/font/*.ttf
+          bunx glyphhanger ./_site/index.html --formats=woff2 --subset=assets/font/*.ttf
           fonttools merge assets/font/*subset*
-          npx glyphhanger --subset=merged.ttf --formats=woff2
+          bunx glyphhanger --subset=merged.ttf --formats=woff2
           cp merged-subset.woff2 _site/assets/FSung.woff2
+
+      - name: Install minify
+        run: |
+          curl -L https://github.com/tdewolff/minify/releases/latest/download/minify_linux_amd64.tar.gz \
+            | tar -xz
+          sudo mv minify /usr/local/bin/minify
+
+      - name: Minify HTML, CSS, JSON, SVG, XML
+        run: |
+          minify \
+            -r -i \
+            --match '*.html' '*.css' '*.json' '*.svg' '*.xml' \
+            -- ./_site
+
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
 
-  build2:
-    runs-on: blacksmith-4vcpu-ubuntu-2404
-    if: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v5
-        with:
-          # Do a sparse checkout on given patterns. Each pattern should be separated with
-          # new lines.
-          # Default: null
-          sparse-checkout: |
-            _includes/
-            _layouts/
-            assets/css/
-            assets/font/
-            assets/svg/
-            docs/
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 'ruby' # Not needed with a `.ruby-version` or `.tool-versions`
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-        env:
-          JEKYLL_ENV: production
-      - name: HTML/CSS/JS Minifier
-        uses: docker://devatherock/minify-js:3.1.0
-        with:
-          directory: './_site'
-          add_suffix: false
-      - uses: actions/setup-node@v4
-        with:
-          cache: 'npm'
-          cache-dependency-path: 'LICENSE'
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-          cache: 'pip' # caching pip dependencies
-      - run: pip install -r requirements.txt
-      - name: Cache FSung.woff2
-        id: cache-FSung
-        uses: actions/cache@v4
-        with:
-          path: _site/assets/FSung.woff2
-          key: cache-${{ hashFiles('concordance.csv') }}
-      - name: Generate FSung.woff2
-        if: steps.cache-FSung.outputs.cache-hit != 'true'
-        run: |
-          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
-          npx glyphhanger ./_site/index.html --formats=woff2 --subset=assets/font/*.ttf
-          fonttools merge assets/font/*subset*
-          npx glyphhanger --subset=merged.ttf --formats=woff2
-          cp merged-subset.woff2 _site/assets/FSung.woff2
-      - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
-        uses: actions/upload-pages-artifact@v3
-  
   # Deployment job
-  deploy1:
+  deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: blacksmith-4vcpu-ubuntu-2404
-    needs: build1
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-  
-  deploy2:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: blacksmith-4vcpu-ubuntu-2404
-    needs: build2
+    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
