@@ -4,7 +4,7 @@ permalink: /
 seo:
   type: Dataset
   name: A Concordance of Taboo
-last_modified_at: 2025-10-27T07:13:31+00:00
+last_modified_at: 2025-10-28T00:58:01+00:00
 description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避諱研究』and『清代避諱研究』with addenda
 ---
 # A Concordance of Taboo [![DOI](https://t18d.github.io/taboo-concordance/assets/svg/zenodo.16625840.svg)](https://doi.org/10.5281/zenodo.16625840)
@@ -88,7 +88,7 @@ description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避
 <br>
 <br>
 <p align="right">
-  v2025.9.1 (FSung: v1.70)
+  v2025.9.2 (FSung: v1.70)
 </p>
 <!-- Anything not in the table must be before this comment. -->
 
