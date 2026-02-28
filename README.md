@@ -4,7 +4,7 @@ permalink: /
 seo:
   type: Dataset
   name: A Concordance of Taboo
-last_modified_at: 2026-02-28T08:48:48+00:00
+last_modified_at: 2026-02-28T09:05:02+00:00
 description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避諱研究』and『清代避諱研究』with addenda
 ---
 # A Concordance of Taboo [![DOI](https://t18d.github.io/taboo-concordance/assets/svg/zenodo.16625840.svg)](https://doi.org/10.5281/zenodo.16625840)
@@ -38,7 +38,7 @@ description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避
     <br>
     <ul>
       <li>The aim is to eventually cover the research on every taboo substitute 
-        attested in pre-1912 sources. Tabooing in the first Republican and 
+        attested in pre-1912 sources. Tabooing in the first Republican and
         Communist periods are rich subjects in their own right, but fall outside 
         the scope of this concordance.</li>
       <li>The sort order of <strong>homophones</strong> is based on Wang (1997).
@@ -60,7 +60,9 @@ description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避
         standard for ideographs that Unicode declines to encode separately from
         their unified counterpart.</li>
       <li>Ideographs with <strong>omitted stroke(s)</strong> in Huang (2024) are
-        covered insofar as they are available in FSung v1.70.</li>
+        covered insofar as they are available in FSung v1.70. Such ideographs may
+        be included before they land in FSung, and will be enclosed in a pair of
+        ~.</li>
     </ul>
   </details>
 </p>
@@ -88,7 +90,7 @@ description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避
 <br>
 <br>
 <p align="right">
-  v2025.9.2 (FSung: v1.70)
+  v2026.3.0-beta (FSung: v1.70)
 </p>
 <!-- Anything not in the table must be before this comment. -->
 
