@@ -4,7 +4,7 @@ permalink: /
 seo:
   type: Dataset
   name: A Concordance of Taboo
-last_modified_at: 2026-02-28T08:40:50+00:00
+last_modified_at: 2026-02-28T08:48:48+00:00
 description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避諱研究』and『清代避諱研究』with addenda
 ---
 # A Concordance of Taboo [![DOI](https://t18d.github.io/taboo-concordance/assets/svg/zenodo.16625840.svg)](https://doi.org/10.5281/zenodo.16625840)
@@ -3171,7 +3171,7 @@ _5221_ |_3288_ |_3119_ |_337&nbsp;of&nbsp;~1260_|_558_ ||
 受旨|S|36||||
 壽板|||417|||
 壽材|||417|||
-壽<ins>昌</ins>|||||Ch’iu Chin-chia (2014) 220|
+壽~昌~|||||Ch’iu Chin-chia (2014) 220|
 壽昌|S|||||
 壽枋|||417|||
 壽宮|||418|||
