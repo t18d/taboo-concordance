@@ -4,7 +4,7 @@ permalink: /
 seo:
   type: Dataset
   name: A Concordance of Taboo
-last_modified_at: 2026-02-28T09:05:02+00:00
+last_modified_at: 2026-03-02T15:17:27+00:00
 description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避諱研究』and『清代避諱研究』with addenda
 ---
 # A Concordance of Taboo [![DOI](https://t18d.github.io/taboo-concordance/assets/svg/zenodo.16625840.svg)](https://doi.org/10.5281/zenodo.16625840)
@@ -72,8 +72,8 @@ description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避
     <summary>Bibliography</summary>
     <h3>Theory</h3>
     <ul>
-      <li>Adamek, Piotr, <em>A Good Son Is Sad if He Hears the Name of His 
-        Father</em> (Sankt Augustin, 2015).</li>
+      <li>Adamek, Piotr, <em>A Good Son Is Sad if He Hears the Name of His Father</em> (Sankt Augustin, 2015).</li>
+      <li>Soymié, Michel, 'Observations sur les caractères interdits en Chine', <em>Journal Asiatique</em>, 3–4 (1990), 388 (la signification de la forme non tabouée).</li>
     </ul>
     <h3>Sources</h3>
     <ul>
