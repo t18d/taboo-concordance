@@ -4,7 +4,7 @@ permalink: /
 seo:
   type: Dataset
   name: A Concordance of Taboo
-last_modified_at: 2026-03-05T01:18:02+00:00
+last_modified_at: 2026-03-05T03:17:21+00:00
 description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避諱研究』and『清代避諱研究』with addenda
 ---
 # A Concordance of Taboo [![DOI](https://t18d.github.io/taboo-concordance/assets/svg/zenodo.16625840.svg)](https://doi.org/10.5281/zenodo.16625840)
@@ -19,11 +19,11 @@ description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避
   that engages with earlier scholarship critically. Wang (1997) is less
   sophisticated, but offers complementary coverage. Hsiang (2016) treads much 
   the same ground and yet fails to take advantage of the Wangs; it is chiefly 
-  useful for the chapter on death and is otherwise cited only when unique
+  useful for the chapter on euphemisms and is otherwise cited only when unique
   infomation is to be found there.</p>
 
-<p>All three quoted from modern editions; none checked the incunabula or 
-  manuscripts. Never trust what you find in them. Always verify the text for
+<p>All three quoted from modern editions; none bothered to check incunabula or 
+  manuscripts. Never trust what you find in them; always verify the text for
   yourself.</p>
 
 <p>Huang (2024), on Ch'ing practice, is a model of verifiability.</p>
@@ -37,10 +37,11 @@ description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避
     <summary>Conventions</summary>
     <br>
     <ul>
-      <li>The aim is to eventually cover the research on every taboo substitute 
+      <li>This concordance covers the research on every taboo substitute 
         attested in pre-1912 sources. Tabooing in the first Republican and
         Communist periods are rich subjects in their own right, but fall outside 
-        the scope of this concordance.</li>
+        the scope. Studies on euphemisms are tracked separately in the
+        <a href="https://github.com/t18d/taboo-concordance/wiki/Euphemisms">Wiki</a>.</li>
       <li>The sort order of <strong>homophones</strong> is based on Wang (1997).
         When an additional lemma is created, the association and complexity of
         its radicals determine the position where it gets inserted.</li>
@@ -49,6 +50,7 @@ description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避
         with the surname to form a single lemma, whilst a <strong>style</strong>
         or <strong>posthumous title</strong> tends to be its own lemma. When in
         doubt, search in the browser.</li>
+      <li>Non-orthographic <strong>variants</strong> are enclosed in a character class, e.g. [元原].</li>
       <li>Where a lemma is discussed on <strong>consecutive pages</strong>, only
         the first page is recorded.</li>
       <li><strong>Honorifics</strong> are not included unless they were
@@ -73,8 +75,8 @@ description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避
     <h3>Theory</h3>
     <ul>
       <li>Adamek, Piotr, <em>A Good Son Is Sad if He Hears the Name of His Father</em> (Sankt Augustin, 2015).</li>
-      <li>竇懷永, '論六朝俗字與唐諱字形', 浙江大學學報, 54/2 (2024), 119–29.</li>
       <li>Soymié, Michel, 'Observations sur les caractères interdits en Chine', <em>Journal Asiatique</em>, 3–4 (1990), 388 (la signification de la forme non tabouée).</li>
+      <li><a href="https://github.com/t18d/taboo-concordance/wiki#tou-huai-yung-2024">Tou (2024)</a></li>
     </ul>
     <h3>Sources</h3>
     <ul>
@@ -83,7 +85,7 @@ description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避
       <li>Wang, Chien, 史諱辭典 (Tokyo, 1997).</li>
       <li>Wang, Yen-k'un, 歷代避諱字彙典 (Peking, 2009).</li>
     </ul>
-    For the references in addenda, see 
+    For the author-date references, see 
     <a href="https://github.com/t18d/taboo-concordance/wiki">
       documentation</a>.
   </details>
@@ -91,7 +93,7 @@ description: Index to『史諱辭典』,『歷代避諱字彙典』,『漢語避
 <br>
 <br>
 <p align="right">
-  v2026.3.0-beta (FSung: v1.70)
+  v2026.3.0 (FSung: v1.70)
 </p>
 <!-- Anything not in the table must be before this comment. -->
 
